@@ -1,0 +1,68 @@
+<div class="min-h-screen bg-gray-50 p-8 lg:p-8 flex items-center justify-center">
+  <div class="w-full max-w-8xl bg-white rounded-[2.5rem] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.08)] overflow-hidden flex flex-col lg:flex-row-reverse border border-gray-100 min-h-175">
+    <div class="lg:w-1/2 relative bg-blue-600 p-12 flex flex-col justify-center items-center">
+      <div class="relative z-10 w-full">
+        <div class="relative group mx-auto max-w-md">
+          <div class="relative p-4 rounded-4x transition-transform duration-500 group-hover:scale-[1.02]">
+            <img src="assets/online-learning-student.jpg" alt="Interactive Mentorship" class="rounded-3xl w-full h-80 object-cover">
+            
+            <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-2xl shadow-xl border border-blue-50 flex items-center gap-4 animate-bounce-slow">
+              <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
+              </div>
+              <div>
+                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-wider">Live Question</p>
+                <p class="text-sm font-black text-black">"How do I scale this?"</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-16 text-center">
+          <h2 class="text-4xl font-black text-white mb-4">Interactive Learning</h2>
+          <p class="text-white/60 font-medium max-w-xs mx-auto">Connect with mentors and get your questions answered in real-time.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="lg:w-1/2 p-4 flex flex-col justify-center bg-white">
+      <div class="max-w-sm mx-auto w-full">
+        <div class="mb-12">
+          <div class="text-blue-600 font-black text-2xl mb-6 tracking-tighter italic">MENTORA.</div>
+          <h1 class="text-4xl font-black text-black mb-3">Welcome Back</h1>
+          <p class="text-gray-400 font-medium">Please enter your details to login.</p>
+        </div>
+
+        <form class="space-y-8">
+          <div class="space-y-2">
+            <label class="text-xs font-black text-black uppercase tracking-widest">Email Address</label>
+            <input type="email" placeholder="email@example.com" class="w-full py-4 bg-white border-b-2 border-gray-100 focus:border-blue-600 outline-none transition-all text-black font-medium placeholder:text-gray-200">
+          </div>
+
+          <div class="space-y-2">
+            <div class="flex justify-between items-center">
+              <label class="text-xs font-black text-black uppercase tracking-widest">Password</label>
+              <a routerLink="/forgot" class="text-[14px] font-bold text-blue-600 hover:underline">Forgot Password?</a>
+            </div>
+            <input type="password" placeholder="••••••••" class="w-full py-4 bg-white border-b-2 border-gray-100 focus:border-blue-600 outline-none transition-all text-black font-medium placeholder:text-gray-200">
+          </div>
+
+          <div class="pt-4">
+            <button class="w-full py-5 bg-blue-600 hover:bg-blue-700 text-white font-black rounded-xl shadow-xl shadow-blue-100 transition-all active:scale-[0.98] flex items-center justify-center gap-3">
+              <span>Login to Platform</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+          </div>
+        </form>
+
+        <div class="mt-12 text-center">
+          <p class="text-sm font-bold text-gray-400">
+            Don't have an account? 
+            <a routerLink="/signup" class="text-blue-600 hover:underline ml-1 cursor-pointer">Create one for free</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
