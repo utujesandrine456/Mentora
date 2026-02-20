@@ -1,0 +1,139 @@
+<section id="contact" class="bg-white py-32 relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <!-- Header -->
+    <div class="text-center mb-20 space-y-4">
+      <h2 class="text-blue-600 font-bold tracking-widest uppercase text-sm">Connect With Us</h2>
+      <h1 class="text-5xl lg:text-6xl font-black text-blue-950 tracking-tight">
+        Let's Start a <span class="text-blue-600">Conversation</span>
+      </h1>
+      <p class="text-xl text-blue-900/60 max-w-2xl mx-auto font-medium leading-relaxed">
+        Ready to elevate your potential? Reach out to us and our team will get back to you within 24 hours.
+      </p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="bg-blue-50/30 rounded-[3rem] border border-blue-100/50 shadow-2xl shadow-blue-100 overflow-hidden">
+      <div class="lg:flex">
+        <!-- Contact Information -->
+        <div class="lg:w-2/5 bg-blue-600 text-white p-12 md:p-16 relative overflow-hidden">
+          <div class="absolute -right-20 -top-20 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+
+          <div class="relative z-10 mb-16">
+            <h3 class="text-3xl font-black mb-6">Contact Information</h3>
+            <p class="text-blue-100 text-lg">
+              Fill out the form and our team will be in touch shortly.
+            </p>
+          </div>
+
+          <div class="relative z-10 space-y-12">
+            <!-- Address -->
+            <div class="flex items-center gap-6 group">
+              <div
+                class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-white/20 transition-all">
+                <i class="fas fa-map-marker-alt text-2xl"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-xl">Our Office</h4>
+                <p class="text-blue-100">Musanze, Rwanda</p>
+              </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="flex items-center gap-6 group">
+              <div
+                class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-white/20 transition-all">
+                <i class="fas fa-phone-alt text-2xl"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-xl">Phone</h4>
+                <p class="text-blue-100">+250 788 123 456</p>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="flex items-center gap-6 group">
+              <div
+                class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-white/20 transition-all">
+                <i class="fas fa-envelope text-2xl"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-xl">Email</h4>
+                <p class="text-blue-100">hello@mentora.com</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Links -->
+          <div class="relative z-10 mt-20 pt-10 border-t border-white/10">
+            <div class="flex gap-4">
+              <a href="#"
+                class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center hover:bg-white hover:text-blue-600 transition-all duration-300">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#"
+                class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center hover:bg-white hover:text-blue-600 transition-all duration-300">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#"
+                class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center hover:bg-white hover:text-blue-600 transition-all duration-300">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="lg:w-3/5 p-12 md:p-16 bg-white shrink-0">
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="space-y-8">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div class="space-y-3">
+                <label for="fullName" class="text-sm font-bold text-blue-900/60 uppercase tracking-wider">Full
+                  Name</label>
+                <input type="text" id="fullName" formControlName="fullName"
+                  class="w-full px-6 py-4 bg-blue-50/50 border border-blue-100 rounded-2xl focus:bg-white focus:border-blue-600 focus:ring-4 focus:ring-blue-100 outline-none transition-all duration-300 font-medium placeholder:text-blue-300"
+                  placeholder="John Doe" />
+              </div>
+              <div class="space-y-3">
+                <label for="email" class="text-sm font-bold text-blue-900/60 uppercase tracking-wider">Email
+                  Address</label>
+                <input type="email" id="email" formControlName="email"
+                  class="w-full px-6 py-4 bg-blue-50/50 border border-blue-100 rounded-2xl focus:bg-white focus:border-blue-600 focus:ring-4 focus:ring-blue-100 outline-none transition-all duration-300 font-medium placeholder:text-blue-300"
+                  placeholder="john@example.com" />
+              </div>
+            </div>
+
+            <div class="space-y-3">
+              <label for="message" class="text-sm font-bold text-blue-900/60 uppercase tracking-wider">Your
+                Message</label>
+              <textarea id="message" rows="6" formControlName="message"
+                class="w-full px-6 py-4 bg-blue-50/50 border border-blue-100 rounded-2xl focus:bg-white focus:border-blue-600 focus:ring-4 focus:ring-blue-100 outline-none transition-all duration-300 font-medium placeholder:text-blue-300 resize-none"
+                placeholder="How can we help you?"></textarea>
+            </div>
+
+            <button type="submit" [disabled]="isLoading || contactForm.invalid"
+              class="w-full bg-blue-600 cursor-pointer hover:bg-blue-700 disabled:bg-blue-300 text-white font-black text-xl py-5 rounded-2xl shadow-xl shadow-blue-200 transition-all duration-300 transform hover:scale-[1.01] active:scale-95 flex items-center justify-center gap-4 group">
+              <span>{{ isLoading ? 'Sending Message...' : 'Send Message' }}</span>
+              <i class="fas fa-paper-plane transition-transform group-hover:translate-x-1" *ngIf="!isLoading"></i>
+              <i class="fas fa-spinner fa-spin" *ngIf="isLoading"></i>
+            </button>
+          </form>
+
+          <!-- Success Alert -->
+          <div *ngIf="isSubmitted" class="mt-8 p-6 bg-green-50 border border-green-100 rounded-2xl animate-fade-in-up">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center shrink-0">
+                <i class="fas fa-check text-green-600 text-xl"></i>
+              </div>
+              <p class="text-green-800 font-bold">Message received! We'll be in touch soon.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Decor -->
+  <div
+    class="absolute right-0 bottom-0 w-96 h-96 bg-blue-50 rounded-full blur-3xl -z-10 translate-x-1/2 translate-y-1/2 opacity-60">
+  </div>
+</section>
