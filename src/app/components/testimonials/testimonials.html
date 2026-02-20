@@ -1,0 +1,40 @@
+<section id="testimonial" class="py-32 bg-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6">
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-20 space-y-4">
+            <h2 class="text-blue-600 font-bold tracking-widest uppercase text-sm">Testimonials</h2>
+            <h1 class="text-5xl lg:text-6xl font-black text-blue-950 tracking-tight">
+                Trusted by <span class="text-blue-600">Thousands</span> of Success Stories
+            </h1>
+            <p class="text-lg text-blue-900/60 font-medium">
+                Hear from our global community of students and mentors who have transformed their lives with Mentora.
+            </p>
+        </div>
+
+        <!-- Testimonials Grid -->
+        <div class="grid md:grid-cols-3 gap-8">
+            <div *ngFor="let item of testimonials"
+                class="p-10 bg-blue-50/50 rounded-[2.5rem] border border-blue-100 group hover:bg-white hover:shadow-2xl transition-all duration-500">
+                <div class="flex items-center gap-4 mb-8">
+                    <img [src]="item.image" [alt]="item.name"
+                        class="w-16 h-16 rounded-2xl object-cover shadow-lg group-hover:scale-110 transition-transform">
+                    <div>
+                        <h4 class="text-xl font-black text-blue-950">{{ item.name }}</h4>
+                        <p class="text-blue-600 font-bold text-sm">{{ item.role }}</p>
+                    </div>
+                </div>
+                <div class="relative">
+                    <i class="fas fa-quote-left text-4xl text-blue-100 absolute -top-4 -left-2 -z-10"></i>
+                    <p class="text-blue-950/70 font-medium text-lg italic leading-relaxed">
+                        "{{ item.content }}"
+                    </p>
+                </div>
+                <div class="mt-8 flex gap-1 text-blue-500">
+                    <i class="fas fa-star" *ngFor="let i of [1,2,3,4,5]"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Decor -->
+    <div class="absolute -right-20 top-0 w-80 h-80 bg-blue-50 rounded-full blur-3xl opacity-50 -z-10"></div>
+</section>
